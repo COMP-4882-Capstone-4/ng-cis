@@ -23,6 +23,7 @@ import {MatDividerModule} from "@angular/material/divider";
 import {NgChartsModule} from 'ng2-charts';
 import {BreakdownChartComponent} from './components/breakdown-chart/breakdown-chart.component';
 import {MatTabsModule} from "@angular/material/tabs";
+import {MatTableModule} from '@angular/material/table';
 
 
 @NgModule({
@@ -52,7 +53,8 @@ import {MatTabsModule} from "@angular/material/tabs";
     MatSidenavModule,
     MatDividerModule,
     NgChartsModule,
-    MatTabsModule
+    MatTabsModule,
+    MatTableModule
   ],
   bootstrap: [AppComponent]
 })
