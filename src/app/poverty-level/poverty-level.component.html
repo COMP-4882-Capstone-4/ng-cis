@@ -7,6 +7,40 @@
     <mat-divider></mat-divider>
 </mat-list>
 
+  <table mat-table
+         [dataSource]="dataSource" multiTemplateDataRows
+         class="mat-elevation-z8">
+    <ng-container matColumnDef="{{column}}" *ngFor="let column of columnsToDisplay">
+      <th mat-header-cell *matHeaderCellDef> {{column}} </th>
+      <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="expandedDetail">
+      <td mat-cell *matCellDef="let element" [attr.colspan]="columnsToDisplay.length">
+        <div class="example-element-detail"
+             [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
+             <h2>Summary:</h2>
+          <div class="example-element-diagram">
+            <div class="example-element-symbol"> <div><b>URL:</b></div>{{element.URL}} </div>
+            <div class="example-element-name"> <div><b>Name:</b></div>{{element.Name}} </div>
+            <div class="example-element-weight"> <div><b>Topic:</b></div>{{element.Topic}} </div>
+          </div>
+          <div class="example-element-description">
+            <div><b>Description of Dataset:</b></div>
+            {{element.description}}
+          </div>
+        </div>
+      </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+    <tr mat-row *matRowDef="let element; columns: columnsToDisplay;"
+        class="example-element-row"
+        [class.example-expanded-row]="expandedElement === element"
+        (click)="expandedElement = expandedElement === element ? null : element">
+    </tr>
+    <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
+  </table>
 
 <div class="button-wrapper">
     <button mat-button routerLink="/" [queryParams]="{reload: true}" disableRipple>Return Home</button>
