@@ -28,6 +28,7 @@ import {
   MapComponent, MapSidebarComponent, PointFeatureSummaryComponent,
   PovertyBreakdownSummaryComponent, SchoolFeatureSummaryComponent
 } from "./components";
+import { PovertyLevelComponent } from './poverty-level/poverty-level.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import {
     SchoolFeatureSummaryComponent,
     FetchErrorComponent,
     WorksCitedComponent,
+    PovertyLevelComponent,
   ],
   imports: [
     BrowserModule,
