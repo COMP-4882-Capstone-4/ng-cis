@@ -20,7 +20,8 @@ import {MatTabsModule} from "@angular/material/tabs";
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import {FormsModule} from "@angular/forms";
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
-import {HomeComponent, WorksCitedComponent} from "./pages";
+import {HomeComponent} from "./pages/home/home.component";
+import {WorksCitedComponent} from "./pages/works-cited/works-cited.component"
 import {
   BreakdownChartComponent,
   BreakdownSummaryComponent, FetchErrorComponent,
@@ -29,6 +30,7 @@ import {
   PovertyBreakdownSummaryComponent, SchoolFeatureSummaryComponent
 } from "./components";
 import { PovertyLevelComponent } from './poverty-level/poverty-level.component';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -65,7 +67,8 @@ import { PovertyLevelComponent } from './poverty-level/poverty-level.component';
     MatTabsModule,
     MatSlideToggleModule,
     FormsModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatTableModule    
   ],
   bootstrap: [AppComponent]
 })
