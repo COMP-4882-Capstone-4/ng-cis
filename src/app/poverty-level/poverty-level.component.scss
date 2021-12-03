@@ -2,6 +2,10 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    text-align: center;
+}
+
 .button-wrapper {
     flex: 1;
     display: flex;
@@ -10,4 +14,54 @@ h1 {
 
 table {
     width: 100%;
+    border: 1px solid navy;
+    text-align: center !important;
 }
+
+.mat-sort-header-container{
+    justify-content: center;
+}
+
+.mat-header-cell {
+    text-align: center !important;
+}
+
+.mat-list {
+    font-size: 26px;
+    color: navy;
+}
+
+.column-1 {
+    background: lightblue;
+}
+
+.column-2 {
+    background: lightcyan;
+}
+
+.column-3 {
+    background: lightpink;
+}
+
+.column-4 {
+    background: lightgrey;
+}
+
+.column-5 {
+    background: lightskyblue;
+}
+
+.column-6 {
+    background: lightsalmon;
+}
+
+.column-7 {
+    background: lightseagreen;
+}
+
+
+
+
+
+  
+ 

@@ -1,46 +1,57 @@
 <h1>More Information On Poverty:</h1>
 
 <mat-list>
-    <mat-list-item>Question: How does the Census measure poverty?</mat-list-item>
-    <mat-divider></mat-divider>
-    <mat-list-item>Answer: The Census measures poverty by measuring if a family's total income is less than the family's threshold, then that family and every individual in it is considered in poverty.</mat-list-item>
-    <mat-divider></mat-divider>
+  <mat-list-item>Question: How does the Census measure poverty?</mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>Answer: The Census measures poverty by measuring if a family's total income is less than the family's threshold, then that family and every individual in it is considered in poverty.</mat-list-item>
+  <mat-divider></mat-divider>
 </mat-list>
 
+<p>&nbsp;&nbsp;</p>
+
+<h2>POVERTY GUIDELINE</h2>
 
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  
+    <ng-container matColumnDef="personInFamily">
+      <th mat-header-cell *matHeaderCellDef> Persons in family/household </th>
+      <td mat-cell *matCellDef="let element"> {{element.personInFamily}} </td>
+    </ng-container>
 
-    <!--- Note that these columns can be defined in any order.
-          The actual rendered columns are set as a property on the row definition" -->
-  
-    <!-- Position Column -->
-    <ng-container matColumnDef="position">
-      <th mat-header-cell *matHeaderCellDef> No. </th>
-      <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+    <ng-container matColumnDef="povertyGuideline">
+      <th mat-header-cell *matHeaderCellDef> Poverty Guideline </th>
+      <td mat-cell *matCellDef="let element"> ${{element.povertyGuideline | number: '2.'}}  </td>
     </ng-container>
-  
-    <!-- Name Column -->
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef> Name </th>
-      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-    </ng-container>
-  
-    <!-- Weight Column -->
-    <ng-container matColumnDef="weight">
-      <th mat-header-cell *matHeaderCellDef> Weight </th>
-      <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
-    </ng-container>
-  
-    <!-- Symbol Column -->
-    <ng-container matColumnDef="symbol">
-      <th mat-header-cell *matHeaderCellDef> Symbol </th>
-      <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
-    </ng-container>
-  
+
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
 
+  <p>&nbsp;&nbsp;</p>
+
+  <h2>POVERTY GUIDELINE</h2>
+
+  <mat-grid-list cols="2" rowHeight="2:1">
+    <mat-grid-tile class="column-1">People in Shelby County, TN live in poverty: <strong [ngStyle]="{'color': 'blue', 'font-size': '24px', 'font-weight': 'bold'}">&nbsp;16.8%</strong></mat-grid-tile>
+    <mat-grid-tile class="column-2">People in the city of Memphis live in poverty: <strong [ngStyle]="{'color': 'maroon', 'font-size': '24px', 'font-weight': 'bold'}">&nbsp;21.7%</strong></mat-grid-tile>
+    <mat-grid-tile class="column-1">Children 18 or under in Shelby County, TN live in poverty: <strong [ngStyle]="{'color': 'blue', 'font-size': '24px', 'font-weight': 'bold'}">&nbsp;25.9%</strong></mat-grid-tile>
+    <mat-grid-tile class="column-2">Children 18 or under in Memphis, TN live in poverty: <strong [ngStyle]="{'color': 'maroon', 'font-size': '24px', 'font-weight': 'bold'}">&nbsp;35%</strong></mat-grid-tile>
+    <mat-grid-tile class="column-3">People in Collierville, TN live in poverty: <strong [ngStyle]="{'color': 'navy', 'font-size': '24px', 'font-weight': 'bold'}">&nbsp;3.9%</strong></mat-grid-tile>
+    <mat-grid-tile class="column-4">People in Germantown, TN live in poverty: <strong [ngStyle]="{'color': 'black', 'font-size': '24px', 'font-weight': 'bold'}">&nbsp;2.5%</strong></mat-grid-tile>
+    <mat-grid-tile class="column-3">Children 18 or under in Collierville, TN live in poverty: <strong [ngStyle]="{'color': 'navy', 'font-size': '24px', 'font-weight': 'bold'}">&nbsp;6%</strong></mat-grid-tile>
+    <mat-grid-tile class="column-4">Children 18 or under in Germantown, TN live in poverty: <strong [ngStyle]="{'color': 'black', 'font-size': '24px', 'font-weight': 'bold'}">&nbsp;2%</strong></mat-grid-tile>
+    <mat-grid-tile class="column-5">People in Bartlett, TN live in poverty: <strong [ngStyle]="{'color': 'red', 'font-size': '24px', 'font-weight': 'bold'}">&nbsp;6.2%</strong></mat-grid-tile>
+    <mat-grid-tile class="column-6">People in Arlington, TN live in poverty: <strong [ngStyle]="{'color': 'grey', 'font-size': '24px', 'font-weight': 'bold'}">&nbsp;3%</strong></mat-grid-tile>
+    <mat-grid-tile class="column-5">Children 18 or under in Bartlett, TN live in poverty: <strong [ngStyle]="{'color': 'red', 'font-size': '24px', 'font-weight': 'bold'}">&nbsp;10%</strong></mat-grid-tile>
+    <mat-grid-tile class="column-6">Children 18 or under in Arlington, TN live in poverty: <strong [ngStyle]="{'color': 'grey', 'font-size': '24px', 'font-weight': 'bold'}">&nbsp;3%</strong></mat-grid-tile>
+    <mat-grid-tile class="column-7">People in Millington, TN live in poverty: <strong [ngStyle]="{'color': 'white', 'font-size': '24px', 'font-weight': 'bold'}">&nbsp;18.6%</strong></mat-grid-tile>
+    <mat-grid-tile></mat-grid-tile>
+    <mat-grid-tile class="column-7">Children 18 or under in Millington, TN live in poverty: <strong [ngStyle]="{'color': 'white', 'font-size': '24px', 'font-weight': 'bold'}">&nbsp;27%</strong></mat-grid-tile>
+
+  </mat-grid-list>
+
+  <p>&nbsp;&nbsp;</p>
+
 <div class="button-wrapper">
-    <button mat-button routerLink="/" [queryParams]="{reload: true}" disableRipple>Return Home</button>
+    <button mat-button routerLink="/" [queryParams]="{reload: true}" color="primary" mat-raised-button disableRipple>Return Home</button>
 </div>

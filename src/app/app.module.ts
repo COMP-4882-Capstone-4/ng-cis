@@ -31,6 +31,7 @@ import {
 } from "./components";
 import { PovertyLevelComponent } from './poverty-level/poverty-level.component';
 import {MatTableModule} from '@angular/material/table';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -68,7 +69,9 @@ import {MatTableModule} from '@angular/material/table';
     MatSlideToggleModule,
     FormsModule,
     MatButtonToggleModule,
-    MatTableModule    
+    MatTableModule,
+    MatGridListModule
+
   ],
   bootstrap: [AppComponent]
 })
