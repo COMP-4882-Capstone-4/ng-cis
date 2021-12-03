@@ -23,6 +23,9 @@
             </mat-tab>
             <mat-tab label="Poverty">
               <div class="inner-sidebar">
+                <div class="button-wrapper-2">
+                  <button class="poverty-level-button" routerLink="poverty-level" color="primary" mat-raised-button disableRipple>Poverty In Detail</button>
+                </div>
                 <div class="stats">
                   <app-breakdown-chart *ngIf="showPovertyChart(currentData)"
                                        [chartData]="currentData.povertyChartData"></app-breakdown-chart>
